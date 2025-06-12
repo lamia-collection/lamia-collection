@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamia Collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Lamia Collection</h1>
+        <nav>
+            <a href="#">Accueil</a>
+            <a href="#produits">Produits</a>
+            <a href="#contact">Contact</a>
+            <a href="#panier" id="cart-btn">Panier (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="produits" class="produits">
+            <article class="produit">
+                <img src="image/robe.jpg" alt="Robe élégante">
+                <h2>Robe Élégante</h2>
+                <p>Prix : 49€</p>
+                <button onclick="ajouterAuPanier('Robe Élégante', 49)">Ajouter au panier</button>
+            </article>
+            <article class="produit">
+                <img src="image/image4.jpg" alt="Collier doré">
+                <h2>Collier Doré</h2>
+                <p>Prix : 25€</p>
+                <button onclick="ajouterAuPanier('Collier Doré', 25)">Ajouter au panier</button>
+            </article>
+            <article class="produit">
+                <img src="image/image2.jpg" alt="ensemble d'été">
+                <h2>ensemble d'été</h2>
+                <p>Prix : 15€</p>
+                <button onclick="ajouterAuPanier('ensemble dété',15)">Ajouter au panier</button>
+            </article>
+        </section>
+
+        <section id="panier" class="panier">
+            <h2>Mon Panier</h2>
+            <ul id="cart-items"></ul>
+            <p>Total : <span id="total">0</span> €</p>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contactez-nous</h2>
+            <p>Pour toute question ou information, vous pouvez nous écrire à :</p>
+            <p><strong>Email :</strong> <a href="mailto:collectionlamia91@gmail.com">collectionlamia91@gmail.com</a></p>       
+            <h3>Suivez-nous sur les réseaux sociaux :</h3>
+            <p>
+                <a href="https://www.instagram.com/lamia_collection" target="_blank">Instagram</a> |
+                <a href="https://www.facebook.com/lamia collection" target="_blank">Facebook</a> |
+                <a href="https://www.tiktok.com/@lamia_collection" target="_blank">TikTok</a>
+            </p>
+        
+            <form action="mailto:Collection@gmail.com" method="post" enctype="text/plain">
+                <label for="nom">Nom :</label><br>
+                <input type="text" id="nom" name="nom" required><br><br>
+        
+                <label for="message">Message :</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+        
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lamia Collection. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
